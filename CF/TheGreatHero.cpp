@@ -47,6 +47,14 @@ YES
 YES
 NO
 YES
+Note
+In the first example: There will be 6 fights between the hero and the only monster. After that, the monster is dead and the health value of the hero becomes 17−6×2=5>0. So the answer is "YES", and moreover, the hero is still living.
+
+In the second example: After all monsters are dead, the health value of the hero will become 709, regardless of the order of all fights. So the answer is "YES".
+
+In the third example: A possible order is to fight with the 1-st, 2-nd, 3-rd and 4-th monsters. After all fights, the health value of the hero becomes −400. Unfortunately, the hero is dead, but all monsters are also dead. So the answer is "YES".
+
+In the fourth example: The hero becomes dead but the monster is still living with health value 1000−999=1. So the answer is "NO".
 TAG:greedy    implementation    sortings */
 #include<bits/stdc++.h>
 using namespace std;
