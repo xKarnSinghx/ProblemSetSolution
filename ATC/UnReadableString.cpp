@@ -150,10 +150,7 @@ void solve()
 		}
 		else	if (i % 2 == 1 && s[i] >= 'A' && s[i] <= 'Z')
 		{c++;}
-		//else {
-		//	c = 1;
-		//	break;
-		//}
+		
 
 	}
 	if (c != s.size())
