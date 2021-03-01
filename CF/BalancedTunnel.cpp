@@ -183,6 +183,40 @@ even: if (check[x2] == 0) {
 	cout << ans;
 
 }
+/*
+//alternate soln
+int n;
+	cin >> n;
+	vector<int> a(n), b(n);
+	for (int i = 0; i < n; i++) {
+		cin >> a[i];
+		--a[i];
+	}
+	for (int i = 0; i < n; i++) {
+		cin >> b[i];
+		--b[i];
+	}
 
+	vector<int> pos(n);
+	for (int i = 0; i < n; i++) {
+		pos[b[i]] = i;
+	}
 
+	vector<int> c(n);
+	for (int i = 0; i < n; i++) {
+		c[i] = pos[a[i]];
+	}
+	for (int i = 0; i < n; i++) {
+		cout << c[i];
+		//--b[i];
+	}
+	int mx = -1, ans = 0;
+	for (int i = 0; i < n; i++) {
+		if (c[i] > mx) {
+			mx = c[i];
+		} else {
+			++ans;
+		}
+	}
+	cout << ans << '\n';*/
 
