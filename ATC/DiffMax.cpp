@@ -123,12 +123,9 @@ int main()
 	freopen("output1.txt", "w", stdout);
 #endif
 
-	//ll t ; cin >> t;
-	//while (t--)
-	{
+	
 		solve();
-		cout << "\n";
-	}
+	
 
 	cerr << "time taken : " << (float)clock() / CLOCKS_PER_SEC << " secs" << endl;
 	return 0;
