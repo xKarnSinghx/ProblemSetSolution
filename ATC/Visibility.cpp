@@ -206,7 +206,7 @@ int main()
 	freopen("output1.txt", "w", stdout);
 #endif
 
-	
+
 		solve();
 	
 
@@ -352,7 +352,6 @@ ll kadanesAlgo(vll ar)
 pll kadanesAlgoIdx(vll ar)
 {
 	ll n = ar.size();
-
 	ll currMax = 0;
 	ll mx = INT_MIN;
 	ll a = 0, b;
@@ -423,17 +422,18 @@ void solve()
 	string s[h];
 	for (auto &i : s)
 		cin >> i;
-
 	ll cnt = -3;
-	for (ll i = x; i < h && s[i][y] != '#'; i++)
+	for (ll i = x - 1; i < h && s[i][y - 1] != '#'; i++)
 		cnt++;
-	for (ll i = x; i >= 0 && s[i][y] != '#'; i--)
+	for (ll i = x - 1; i >= 0 && s[i][y - 1] != '#'; i--)
 		cnt++;
-	for (ll j = y; j < w && s[x][j] != '#'; j++)
+	for (ll j = y - 1; j < w && s[x - 1][j] != '#'; j++)
 		cnt++;
-	for (ll j = y; j >= 0 && s[x][j] != '#'; j--)
+	for (ll j = y - 1; j >= 0 && s[x - 1][j] != '#'; j--)
 		cnt++;
 	cout << cnt;
 }
+
+
 
 
