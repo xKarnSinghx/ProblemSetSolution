@@ -1,4 +1,144 @@
 /*
+B - Visibility  / 
+Time Limit: 2 sec / Memory Limit: 1024 MB
+
+Score : 
+200
+ points
+
+Problem Statement
+We have a grid of 
+H
+ horizontal rows and 
+W
+ vertical columns, where some of the squares contain obstacles.
+Let 
+(
+i
+,
+j
+)
+ denote the square at the 
+i
+-th row from the top and 
+j
+-th column from the left.
+You are given 
+H
+ strings 
+S
+1
+,
+S
+2
+,
+S
+3
+,
+…
+,
+S
+H
+. The 
+j
+-th character of 
+S
+i
+ describes the square 
+(
+i
+,
+j
+)
+; # means the square contains an obstacle, and . means it does not.
+We say a square is visible from another when it is on the same row or the same column, and there is no obstacle between them (including themselves).
+Print the number of squares visible from the square 
+(
+X
+,
+Y
+)
+ (including 
+(
+X
+,
+Y
+)
+ itself).
+
+Constraints
+1
+≤
+H
+≤
+100
+1
+≤
+W
+≤
+100
+1
+≤
+X
+≤
+H
+1
+≤
+Y
+≤
+W
+S
+i
+ is a string of length 
+W
+ consisting of . and #.
+The square 
+(
+X
+,
+Y
+)
+ does not contain an obstacle.
+Input
+Input is given from Standard Input in the following format:
+
+H
+ 
+W
+ 
+X
+ 
+Y
+
+S
+1
+
+S
+2
+
+S
+3
+
+⋮
+
+S
+H
+
+Output
+Print the answer.
+
+Sample Input 1 
+Copy
+4 4 2 2
+##..
+...#
+#.#.
+.#.#
+Sample Output 1 
+Copy
+4
+
+*/
 #include<bits/stdc++.h>
 #include <cstdio>
 #include <cstring>
@@ -66,12 +206,9 @@ int main()
 	freopen("output1.txt", "w", stdout);
 #endif
 
-	ll t ; cin >> t;
-	while (t--)
-	{
+	
 		solve();
-		cout << "\n";
-	}
+	
 
 	cerr << "time taken : " << (float)clock() / CLOCKS_PER_SEC << " secs" << endl;
 	return 0;
