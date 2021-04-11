@@ -420,9 +420,6 @@ ll firstdigit(ll n) {
 ll b = 1;
 void solve()
 {
-	/*ll a, b;
-	cin >> a >> b;
-	*/
 	ll n, k1, k2;
 	cin >> n >> k1 >> k2;
 	ll a[n];
