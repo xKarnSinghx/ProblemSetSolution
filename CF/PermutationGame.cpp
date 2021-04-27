@@ -160,7 +160,6 @@ void solve()
 			cout << -1;
 			return;
 		}
-		//cout << a[l[i - 1] - 1] << " ";
 	}
 	ll ans = -1;
 	ll cnt[n] = {};
@@ -179,7 +178,6 @@ void solve()
 		}
 	}
 	x = 0;
-	//sort(cnt, cnt + n);
 	foi(n) {
 		if (cnt[i] == 2) {
 			cout << ans;
@@ -189,7 +187,6 @@ void solve()
 			a[i] = value[x];
 			x++;
 		}
-		//cout << cnt[i] << " ";
 	}
 	ll cnt1[n] = {};
 	foi(n) {
@@ -200,7 +197,6 @@ void solve()
 			cout << ans;
 			return;
 		}
-		//cout << cnt1[i] << " ";
 	}
 	ll f = -1;
 	foi(m - 1) {
