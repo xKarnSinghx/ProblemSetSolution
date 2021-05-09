@@ -46,7 +46,8 @@ In the first sample, their journey may end in cities 3 or 4 with equal probabili
 In the second sample, their journey may end in city 4 or 5. The distance to the both cities is 2, so the expected length is 2.
 
 
-*/#include<bits/stdc++.h>
+*/
+#include<bits/stdc++.h>
 #include <cstdio>
 #include <cstring>
 #include <cmath>
@@ -141,15 +142,16 @@ ll lcm(ll a, ll b) {
 
 }
 const ll N = 200001;
-ll n;
+ll n,vis[N];
 vll g[N];
-ld dfs(ll v = 1, ll p = -1) {
-	ld s = 0;
+ld dfs(ll v) {
+	ld s = 0,ans=0;
+	vis[v]=1;
 	for (auto u : g[v])
-		if (u != p)
-			s += dfs(u, v) + 1;
+		if (!vis[u])
+			ans += dfs(u),s++;
 	if (s)
-		return s / (g[v].size() - (p != -1));
+		return ans / s+1;
 	else
 		return 0;
 }
@@ -163,5 +165,5 @@ void solve() {
 	}
 	cout << fixed ;
 	cout << setprecision(15) ;
-	cout << dfs(1, -1);
+	cout << dfs(1);
 }
