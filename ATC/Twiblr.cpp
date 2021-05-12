@@ -139,5 +139,5 @@ ll lcm(ll a, ll b) {
 void solve() {
 	ll a, b;
 	cin >> a >> b;
-	cout << 2 * a - b;
+	cout << 2 * a - b+100LL;
 }
