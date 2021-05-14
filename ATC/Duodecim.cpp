@@ -130,7 +130,7 @@ void solve() {
 	cin >> n;
 	ll dp[12] = {0};
 	dp[0] = 1;
-	while (n--) {
+	while (--n) {
 		for (ll i = 10; i >= 0; i--)
 			dp[i + 1] += dp[i];
 	}
