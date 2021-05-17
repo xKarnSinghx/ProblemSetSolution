@@ -150,31 +150,14 @@ ll lcm(ll a, ll b) {
 void solve() {
 	ll n, x, k;
 	cin >> n >> x >> k;
-	vll a, b;
-	ll z = 0;
-	while (z < n + 2) {
-		a.pb(z);
-		z += k;
-	}
-	z = n + 1;
-	while (z > 0) {
-		b.pb(z);
-		z -= k;
-	}
-	foi(a.size()) {
-		if (a[i] == x) {
-			cout << "YES";
-			return;
-		}
-	}
-	foi(b.size()) {
-		if (b[i] == x) {
-			cout << "YES";
-			return;
-		}
+	if (x % k == 0 or (n + 1 - x) % k == 0) {
+		cout << "YES";
+		return;
 	}
 	cout << "NO";
 
 }
+
+
 
 
