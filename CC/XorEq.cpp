@@ -26,8 +26,7 @@ Constraints
     1≤T≤105
 
 1≤N≤105
-*/
-#include<bits/stdc++.h>
+*/#include<bits/stdc++.h>
 #include <cstdio>
 #include <cstring>
 #include <cmath>
@@ -132,11 +131,10 @@ void solve() {
 			ans *= res;
 		ans %= MOD;
 		n /= 2;
-		res *= 2;
+		res = res * res;
 		res %= MOD;
 	}
 	cout << ans;
 
 }
-
 
