@@ -166,6 +166,7 @@ void solve() {
 	cin >> n;
 	ll ans = powmod(10, n) - powmod(9, n) - powmod(9, n) + powmod(8, n);
 	ans %= MOD;
+	ans = (ans + MOD) % MOD;
 	cout << ans;
 }
 
