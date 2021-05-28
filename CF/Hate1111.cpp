@@ -163,7 +163,6 @@ ll noofdigit(ll n) {
 void solve() {
 	ll x;
 	cin >> x;
-	ll t1 = noofdigit(x);
 	ll ans = (x % 11) * 111;
 	if (ans <= x) {
 			cout << "YES";
