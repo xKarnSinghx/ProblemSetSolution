@@ -223,16 +223,6 @@ ll kadanesAlgo(vll a)
 ll n, q;
 vll a(100001, 0);
 void solve() {
-	/*	cin >> n >> q;
-		foi(n) {
-			ll x;
-			cin >> x;
-			a[x]++;
-		}
-		foi(q) {
-			ll z;
-			cin >> z;
-		}*/
 	ll a, b, c;
 	cin >> a >> b >> c;
 	if (c % 2) {
