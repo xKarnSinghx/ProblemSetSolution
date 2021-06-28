@@ -83,6 +83,5 @@ fun main(args: Array<String>) {
         cord=y*(z/2)
         }
         println(cord)
-        // println(z/2)
     }
 }
