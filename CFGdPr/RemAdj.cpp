@@ -95,9 +95,8 @@ typedef vector<double>      vd;
 typedef vector<pii>         vpii;
 typedef vector<pll>         vpll;
 typedef pair< ll, pll>      plll;
-typedef queue<ll>           qll;
 typedef vector<plll>      vplll;
-typedef  vector<set<ll>>   vsll;
+typedef  vector<string> 	     vs;
 typedef  vector<char>	         vc;
 typedef  vector<bool>            vb;
 typedef  map<string, int>         msi;
@@ -131,7 +130,7 @@ int main()
 //	while (t--)
 	{
 		solve();
-		cout << endl;
+		cout << "\n";
 	}
 
 	cerr << "time taken : " << (float)clock() / CLOCKS_PER_SEC << " secs" << endl;
@@ -197,53 +196,23 @@ ll kadanesAlgo(vll a)
 	}
 	return mx;
 }
-ll ask(ll x, ll y) {
-	cout << "? " << x << " " << y << endl;
-	ll z;
-	cin >> z;
-	return z;
-}
-qll l;
-vsll g;
+
 void solve() {
 	ll n;
 	cin >> n;
-	g.resize(n + 1);
-	foi(n - 1) {
-		ll x, y;
-		cin >> x >> y;
-		g[x].insert(y);
-		g[y].insert(x);
-	}
-	foi(n+1) {
-	    if(i==0)
-	    continue;
-		if (g[i].size() == 1) {
-			l.push(i);
+	string s;
+	cin >> s;
+	foi(26) {
+		foj(n) {
+			fok(s.size()) {
+				if (s[k] == char(26 - i + 'a')) {
+					if ((k + 1 < s.size() and s[k + 1] == (char)(26 - i + 'a' - 1)) or (k - 1 >= 0 and s[k - 1] == (char)(26 - i + 'a' - 1))) {
+						s = s.substr(0, k) + s.substr(k + 1);
+					}
+				}
+			}
 		}
 	}
-	while (true) {
-		if (l.size() == 1) {
-			cout << "! " << l.front() << endl;
-			return;
-		}
-		ll a = l.front();
-		l.pop();
-		ll b = l.front();
-		l.pop();
-		ll ans=ask(a,b);
-		if (ans == a or ans == b) {
-			cout << "! " << ans << endl;
-			return;
-		}
-		ll x = *g[a].begin(), y = *g[b].begin();
-		g[x].erase(a), g[y].erase(b);
-		if (g[x].size() <= 1) {
-			l.push(x);
-		}
-		if (x != y and g[y].size() <= 1) {
-			l.push(y);
-		}
-	}
-
+	cout <<  n - s.size();
 }
+ 
