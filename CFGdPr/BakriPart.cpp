@@ -310,11 +310,11 @@ bool isSubSequence(string a, string b, ll m, ll n) {
 			j++;
 	return (j == m);
 }
-int n, k, s = 0, c = 0;
-vi a(N / 2, 0);
-vector<vi> g(N / 2);
-int dfs(int u, int p) {
-	int j = 0;
+ll n, k, s = 0, c = 0;
+vll a(N / 2, 0);
+graph g(N / 2);
+ll dfs(ll u, ll p) {
+	ll j = 0;
 	for (ll v : g[u]) {
 		if (v == p)
 			continue;
@@ -324,21 +324,22 @@ int dfs(int u, int p) {
 		else
 			j ^= x;
 	}
-	j ^= a[u];
-	return j;
+	return j ^ a[u];
 }
 void solve() {
-	a.clear(), g.clear();
+	a.clear();
 	c = 0, s = 0;
 	cin >> n >> k;
 	foi(n) {
-		cin >> a[i];
-		s ^= a[i];
+		cin >> a[i + 1];
+		s ^= a[i + 1];
+	}
+	foi(N / 2) {
+		g[i].clear();
 	}
 	foi(n - 1) {
 		ll x, y;
 		cin >> x >> y;
-		x--, y--;
 		g[x].pb(y);
 		g[y].pb(x);
 	}
@@ -350,14 +351,15 @@ void solve() {
 		cout << "No";
 		return;
 	}
-	//cout << c << " ";
-	dfs(0, -1);
+	dfs(1ll, -1);
 	if (c > 1)
 		cout << "Yes";
 	else
 		cout << "No";
-	cout << c;
 }
+
+
+
 
 
 
