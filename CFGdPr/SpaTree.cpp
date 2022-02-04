@@ -1,5 +1,5 @@
 /*
-E. Spanning Tree Queries
+                                                                               E. Spanning Tree Queries
 time limit per test4 seconds
 memory limit per test256 megabytes
 inputstandard input
