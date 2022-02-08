@@ -42,5 +42,4 @@ inputCopy
 2 3
 outputCopy
 0
-
 */
