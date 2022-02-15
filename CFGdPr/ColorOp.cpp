@@ -1,5 +1,5 @@
 /*
-E. Colorful Operations
+                                                                                        E. Colorful Operations
 time limit per test4 seconds
 memory limit per test256 megabytes
 inputstandard input
