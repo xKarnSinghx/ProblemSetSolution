@@ -254,8 +254,11 @@ void solve() {
 	foi(oper.size()) {
 		cout << oper[i][0] << " " << oper[i][1] << endl;
 	}
+	cout << t.size() << endl;
 	foi(t.size()) {
 		cout << t[i] << " ";
 	}
 
+
 }
+
